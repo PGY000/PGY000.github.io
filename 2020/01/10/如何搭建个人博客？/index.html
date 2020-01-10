@@ -401,12 +401,13 @@ height:50vh;
 <p>首先介绍一下要用到的材料：</p>
 <p><a href="https://baike.sogou.com/v10763190.htm?fromTitle=github" target="_blank" rel="noopener">GitHub</a>：软件源代码托管服务平台<br><a href="https://baike.sogou.com/v65738025.htm?fromTitle=GIT" target="_blank" rel="noopener">Git</a>：免费、开源的分布式版本控制系统<br><a href="https://baike.sogou.com/v18472594.htm?fromTitle=node.js" target="_blank" rel="noopener">Node.js</a>:  一个Javascript运行环境，也就是说是让服务器能跑js代码<br><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>: 一个基于Nodejs快速简洁高效的博客框架</p>
 <p>1.首先去<a href="https://github.com/" target="_blank" rel="noopener">GitHub官网</a>注册一个账号，并且建立一个仓库以.github.io为后缀的一个仓库名（注意仓库名要和用户名一致）<br></p>
-<p>2.<a href="http://xiazai.sogou.com/detail/34/16/-3684166773641448611.html?e=1970" target="_blank" rel="noopener">下载Git</a>，然后按照指示安装，完成后，在电脑桌面点击鼠标右键，若出现下图所示，则安装成功。<br><img src="./pic_1.png" alt="Alt text"></p>
+<p>2.<a href="http://xiazai.sogou.com/detail/34/16/-3684166773641448611.html?e=1970" target="_blank" rel="noopener">下载Git</a>，然后按照指示安装，完成后，在电脑桌面点击鼠标右键，若出现下图所示，则安装成功。<br><img src="/images/pic_1.png" alt="Alt text"></p>
 <p>3.自行<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">下载Node.js稳定版</a>后，安装hexo （详细操作在后面会有介绍）</p>
-<h2 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始"></a>正式开始</h2><p>###步骤一，将Git和GitHub连接起来</p>
+<h2 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始"></a>正式开始</h2><blockquote>
+<h3 id="步骤一，将Git和GitHub连接起来"><a href="#步骤一，将Git和GitHub连接起来" class="headerlink" title="步骤一，将Git和GitHub连接起来"></a>步骤一，将Git和GitHub连接起来</h3></blockquote>
 <p>（1）<strong>获取密钥：</strong>在电脑桌面点击鼠标右键——&gt;进入Git Bash Here，输入以下指令后回车</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen</span><br></pre></td></tr></table></figure>
-<p>找到 id_rsa的文件夹，用记事本打开同目录下文件名为 id_rsa.pub 文件，复制里面的内容。与此同时，打开我们已经注册好的Github网页，操作如下：<br>右上角–&gt;<img src="./pic_2.png" alt="Alt text"><br>—&gt;<img src="./pic_3.png" alt="Alt text"></p>
+<p>找到 id_rsa的文件夹，用记事本打开同目录下文件名为 id_rsa.pub 文件，复制里面的内容。与此同时，打开我们已经注册好的Github网页，操作如下：<br>右上角–&gt;<img src="/images/pic_2.png" alt="tip"><br>—&gt;<img src="/images/pic_3.png" alt="Alt text"></p>
 <p>然后将复制的内容粘贴到SSH-key内绑定即可。</p>
 <p>（2）<strong>验证二者成功连接：</strong>在桌面新建一个文件夹project，在文件夹里面点击鼠标右键，进入Git Bash Here，输入指令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  git init     (目的：初始化)</span><br></pre></td></tr></table></figure>
@@ -416,7 +417,8 @@ height:50vh;
 <p>（3）<strong>将本地文件推到GitHub上：</strong>在project文件夹中建立一个index.html 文件，然后在文件夹中进入Git Bash Here ，依次输入指令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$  git add index.html</span><br><span class="line">$  git commit -m<span class="string">'demo'</span>  (注：-m<span class="string">'文件名'</span>：描述该文件)</span><br><span class="line">$  git push origin master</span><br></pre></td></tr></table></figure>
 <p>然后根据提示输入GitHub上的用户名和密码即可。</p>
-<p>###步骤二：用hexo搭建博客</p>
+<blockquote>
+<h3 id="步骤二：用hexo搭建博客"><a href="#步骤二：用hexo搭建博客" class="headerlink" title="步骤二：用hexo搭建博客"></a>步骤二：用hexo搭建博客</h3></blockquote>
 <p>（1）<strong>hexo的安装：</strong>下载并安装完Node.js 后，在桌面进入Git Bash Here，输入指令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$   npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 <p>(若出现版本号则安装成功)</p>
@@ -429,9 +431,10 @@ height:50vh;
 <p>  （注：冒号后面要加空格）<br>  返回（2）中的Git Bash Here，依次输入以下指令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$  hexo generate</span><br><span class="line">$  hexo deploy  (目的：将hexo博客布署到GitHub上)</span><br></pre></td></tr></table></figure>
 <p>此时，在浏览器输入你的博客网址则可以看到个人博客的主页了！<br>以为到这就结束了？No，收起你激动的小心脏，接着往下看！</p>
-<p>###步骤三：更改hexo的主题</p>
+<blockquote>
+<h3 id="步骤三：更改hexo的主题"><a href="#步骤三：更改hexo的主题" class="headerlink" title="步骤三：更改hexo的主题"></a>步骤三：更改hexo的主题</h3></blockquote>
 <p>虽然我们已经搭建好一个博客，但是它的主题框架是最原始的，也是比较简陋的。一个好看的主题样式会令人赏心悦目，也会更加吸引人们的关注！</p>
-<p><strong>主题的更换：</strong>首先打开<a href="hexo.io">hexo的官网</a>,打开themes，如下图<br><img src="./pic_4.png" alt="Alt text"></p>
+<p><strong>主题的更换：</strong>首先打开<a href="hexo.io">hexo的官网</a>,打开themes，如下图<br><img src="/images/pic_4.png" alt="Alt text"></p>
 <p>挑选自己喜欢的主题，然后按照主题上面的安装提示操作即可。一般主题上都会有相应的指令，在blog文件夹内进入Git Bash Here，输入相应指令后，重新布署一下即可：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>(j建议每次布署内容时都依次输入以上指令)</p>
@@ -448,7 +451,7 @@ height:50vh;
             <p>原文作者：<a href="http://yoursite.com">PGY</a>
             <p>原文链接：<a href="http://yoursite.com/2020/01/10/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%9F/">http://yoursite.com/2020/01/10/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%9F/</a>
             <p>发表日期：<a href="http://yoursite.com/2020/01/10/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%9F/">January 10th 2020, 6:15:49 pm</a>
-            <p>更新日期：<a href="http://yoursite.com/2020/01/10/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%9F/">January 10th 2020, 6:20:52 pm</a>
+            <p>更新日期：<a href="http://yoursite.com/2020/01/10/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%9F/">January 10th 2020, 11:57:35 pm</a>
             <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -587,7 +590,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#如何搭建一个属于自己博客？"><span class="toc-number">1.</span> <span class="toc-text">如何搭建一个属于自己博客？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正式开始"><span class="toc-number">2.</span> <span class="toc-text">正式开始</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#如何搭建一个属于自己博客？"><span class="toc-number">1.</span> <span class="toc-text">如何搭建一个属于自己博客？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正式开始"><span class="toc-number">2.</span> <span class="toc-text">正式开始</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#步骤一，将Git和GitHub连接起来"><span class="toc-number">2.1.</span> <span class="toc-text">步骤一，将Git和GitHub连接起来</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#步骤二：用hexo搭建博客"><span class="toc-number">2.2.</span> <span class="toc-text">步骤二：用hexo搭建博客</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#步骤三：更改hexo的主题"><span class="toc-number">2.3.</span> <span class="toc-text">步骤三：更改hexo的主题</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
